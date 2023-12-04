@@ -20,7 +20,7 @@ export const usePokedexData = () => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:8080/pokedex');
+        const response = await fetch(`https://prueba-test-backend-production.up.railway.app/pokedex`);
         const data: Pokemon[] = await response.json();
         setPokedexData(data);
       } catch (error) {
@@ -125,6 +125,7 @@ export const usePokedexData = () => {
       setError("Error al obtener el Pokémon con el peso más alto");
     }
   };
+
 
   return { pokedexData, error, createPokemon, deletePokemon, editPokemon, getPokemonWithMaxExp,
             getPokemonWithMaxHeight, getPokemonWithMaxWeight, loading };
