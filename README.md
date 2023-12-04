@@ -1,4 +1,4 @@
-## CÓMO ABRIR EL FRONT-END.
+## CÓMO ABRIR EL FRONT-END
 
 Debes posicionarte en la carpeta 'prueba-test' que es donde está el FRONT-END.
 
