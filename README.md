@@ -1,3 +1,13 @@
+## COMANDOS PARA SUBIR EL PROYECTO
+
+Se usaron este comando para subir a GitHub tanto el FRONT como el BACK. 
+
+git init (Este comando inicializa un nuevo repositorio Git).
+git add . (Este comando añade todos los archivos del directorio de trabajo al área de trabajo).
+git commit -m "first commit" (Este comando realiza un commit con los cambios que has agregado al área de trabajo).
+git remote add origin https://github.com/NOMBRE_USUARIO/NOMBRE_PROYECTO.git (Este comando establece una conexión remota llamada "origin" en el repositorio).
+git push -u origin master (Este comando envía tus cambios al repositorio remoto en GitHub).
+
 ## CÓMO ABRIR EL FRONT-END
 
 Debes posicionarte en la carpeta 'prueba-test' que es donde está el FRONT-END.
