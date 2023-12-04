@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const ModalEdit: React.FC<ModalEditProps> = ({ itsActive, setItsActive, pokemon, editPokemon }) => {
+export default function ModalEdit ({ itsActive, setItsActive, pokemon, editPokemon }) {
 
     const [formData, setFormData] = useState({
         name: "",
@@ -139,4 +139,3 @@ const ModalEdit: React.FC<ModalEditProps> = ({ itsActive, setItsActive, pokemon,
     }
 }
 
-export default ModalEdit;

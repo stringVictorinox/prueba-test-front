@@ -1,13 +1,28 @@
 "use client";
+
 import { useState } from 'react';
 
 export default function ModalCreate({ itsActive, setItsActive, createPokemon, error }) {
+
+    interface validationErrors {
+        name?: string;
+        height?: string;
+        weight?: string;
+        experience?: string;
+    }
+
+    interface errors {
+        name?: string;
+        height?: string;
+        weight?: string;
+        experience?: string;
+    }
 
     const [formData, setFormData] = useState({
         name: "", height: "", weight: "", experience: ""
     });
 
-    const [errors, setErrors] = useState({});
+    const [errors, setErrors] = useState<errors>({});
 
     const closeModal = () => {
         setItsActive(false);
@@ -32,7 +47,7 @@ export default function ModalCreate({ itsActive, setItsActive, createPokemon, er
 
     const handleCreateClick = () => {
 
-        const validationErrors = {};
+        const validationErrors: validationErrors = {};
 
         if (!formData.name.trim()) validationErrors.name = "El nombre del Pokémon es requerido";
         if (!formData.height.trim()) validationErrors.height = "Altura necesaria";
@@ -47,7 +62,6 @@ export default function ModalCreate({ itsActive, setItsActive, createPokemon, er
                 validationErrors.name = "El Pokémon ya está creado.";
             } else {
 
-                console.log("2");
                 setItsActive(false);
     
                 // Reiniciar el estado
