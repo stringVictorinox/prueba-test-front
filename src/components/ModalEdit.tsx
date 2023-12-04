@@ -2,19 +2,6 @@
 
 import { useState, useEffect } from 'react';
 
-interface ModalEditProps {
-    itsActive: boolean;
-    setItsActive: React.Dispatch<React.SetStateAction<boolean>>;
-    pokemon: {
-        id: number;
-        name: string;
-        height: string;
-        weight: string;
-        experience: string;
-    };
-    editPokemon: (id: number, data: { name: string; height: string; weight: string; experience: string }) => void;
-}
-
 const ModalEdit: React.FC<ModalEditProps> = ({ itsActive, setItsActive, pokemon, editPokemon }) => {
 
     const [formData, setFormData] = useState({
