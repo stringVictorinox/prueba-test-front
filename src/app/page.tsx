@@ -34,7 +34,7 @@ const Home: React.FC<HomeProps> = () => {
   const firstIndex = lastIndex - recordsPerPage;
   const records = pokedexData.slice(firstIndex, lastIndex);
   const npage = Math.ceil(pokedexData.length / recordsPerPage);
-  const numbers = [...Array(Number(npage) + 1).keys()].slice(1);
+  const numbers = Array.from({ length: Number(npage) }, (_, index) => index + 1);
 
   // Funciones para manejar el paginado a una pagina anterior y siguiente; y cambiar de página.
 
